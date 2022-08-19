@@ -55,7 +55,7 @@ public class Controller {
         result += "Weather: " + obj.get("weather").toString().substring(firstSubstringIndex, secondSubstringIndex) + "\n";
         result += "Temperature: " + obj.getJSONObject("main").getDouble("temp")
                 + " (Max: " + obj.getJSONObject("main").getDouble("temp_max")
-                + " Min: " + obj.getJSONObject("main").getDouble("temp_min") + ")\n";
+                + " Min: " + obj.getJSONObject("main").getDouble("temp_min") + ")℃\n";
         result += "Feels like: " + obj.getJSONObject("main").getInt("feels_like") + "\n";
         result += "Pressure: " + obj.getJSONObject("main").getInt("pressure") + " hPa" + "\n";
         result += "Humidity: " + obj.getJSONObject("main").getInt("humidity") + "%" + "\n";
