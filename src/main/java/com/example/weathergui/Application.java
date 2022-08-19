@@ -6,8 +6,8 @@ import javafx.stage.Stage;
 import java.io.IOException;
 
 public class Application extends javafx.application.Application {
-    Integer WINDOW_HEIGHT = 500;
-    Integer WINDOW_WIDTH = 400;
+    Integer WINDOW_HEIGHT = 800;
+    Integer WINDOW_WIDTH = 450;
     public static String city = "";
 
     @Override
