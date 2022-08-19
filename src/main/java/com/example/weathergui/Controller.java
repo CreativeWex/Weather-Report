@@ -102,6 +102,7 @@ public class Controller {
 //        lbWeather.setText(result);
 
         //=========== DATE TIME ===========
+        //TODO: выровнять текст
         DateTimeFormatter dateFormat = DateTimeFormatter.ofPattern("HH:mm");
         DateTimeFormatter timeFormat = DateTimeFormatter.ofPattern("MM.dd.yyyy");
         LocalDateTime currentTime = LocalDateTime.now();
@@ -111,6 +112,7 @@ public class Controller {
         lbDate.setVisible(true);
 
         //=========== CITY COUNTRY ===========
+        //TODO: выровнять текст
         String tmpFirst = "name\":\"";
         String tmpSecond = "\",\"cod\"";
         lbCity.setText(weatherData.substring(weatherData.indexOf(tmpFirst) + tmpFirst.length(),
@@ -118,6 +120,7 @@ public class Controller {
         lbCity.setVisible(true);
 
         //=========== WEATHER ===========
+        //TODO: выровнять текст
         tmpFirst = "\"description\":\"";
         tmpSecond = "\",\"main\":\"";
         int tmpIndexFirst = obj.get("weather").toString().indexOf(tmpFirst) + tmpFirst.length();
@@ -126,13 +129,14 @@ public class Controller {
         lbWeather.setVisible(true);
 
         //=========== TEMPERATURE ===========
-        Integer temperature = obj.getJSONObject("main").getInt("temp"); //TODO: поменять отображение минуса путем приклеивания перед строкой
+        //TODO: выровнять текст
+        //TODO: поменять отображение минуса путем приклеивания перед строкой
+        Integer temperature = obj.getJSONObject("main").getInt("temp");
         lbTemp.setText(buildTemp(temperature, "main"));
         temperature = obj.getJSONObject("main").getInt("temp_min");
         lbTempMin.setText(buildTemp(temperature, "min"));
         temperature = obj.getJSONObject("main").getInt("temp_max");
         lbTempMax.setText(buildTemp(temperature, "max"));
-
         lbTemp.setVisible(true);
         lbTempMax.setVisible(true);
         lbTempMin.setVisible(true);
